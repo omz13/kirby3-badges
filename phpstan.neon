@@ -5,6 +5,7 @@ parameters:
 	polluteScopeWithLoopInitialAssignments: true
 	earlyTerminatingMethodCalls: []
 	universalObjectCratesClasses: []
-	ignoreErrors: []
+	ignoreErrors:
+		- '#Access to an undefined property Kirby\\Text\\KirbyTag::\$[a-z]+.#'
 	tmpDir: %rootDir%/tmp
 	level: 5
