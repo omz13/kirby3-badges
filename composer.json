@@ -1,5 +1,6 @@
 {
   "name": "omz13/kirby3-badges",
+  "type": "kirby-plugin",
   "description": "kirby3 plugin to provide a tag (badge) to make badges",
   "keywords": [
     "kirby3",
@@ -19,14 +20,17 @@
   "require": {
     "php": ">=7.1",
     "badges/poser": "^1.2",
-    "getkirby/cms": "dev-master as 3.0.0"
+    "getkirby/composer-installer": "^1.1"
   },
   "require-dev": {
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
+    "getkirby/cms": "^3.0.1",
     "jakub-onderka/php-parallel-lint": "^1.0",
+    "localheinz/composer-normalize": "^1.0.0",
     "omz13/omz13-coding-standard": "dev-master",
+    "phpcompatibility/php-compatibility": "^8.2",
     "phpmd/phpmd": "^2.6",
     "phpstan/phpstan": "^0.10.3",
+    "phpstan/phpstan-strict-rules": "^0.10.1",
     "roave/security-advisories": "dev-master"
   },
   "config": {
@@ -36,32 +40,8 @@
   "autoload": {
     "psr-4": {
       "omz13\\": "src/"
-    },
-    "files": [
-      "src/config.php"
-    ]
-  },
-  "archive": {
-    "exclude": [
-      ".*",
-      "makefile",
-      "*.xml",
-      "!/vendor/*",
-      "/vendor/*/*/.*",
-      "/vendor/*/*/docs/*",
-      "/vendor/*/*/example/*",
-      "/vendor/*/*/examples/*",
-      "/vendor/*/*/test/*",
-      "/vendor/*/*/tests/*",
-      "/vendor/*/*/php4/*"
-    ]
-  },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/k-next/kirby"
     }
-  ],
+  },
   "minimum-stability": "beta",
   "scripts": {
     "build": [
@@ -82,14 +62,6 @@
       "@mess"
     ],
     "stan": "./vendor/bin/phpstan analyse --level 7 ./src",
-    "style": "./vendor/bin/phpcs ./src/*",
-    "zip": [
-      "composer remove getkirby/cms",
-      "composer install --no-dev",
-      "composer dumpautoload -o",
-      "composer archive --format=zip --dir=dist",
-      "composer require getkirby/cms:'dev-master as 3.0.0'",
-      "composer dumpautoload -o"
-    ]
+    "style": "./vendor/bin/phpcs ./src/*"
   }
 }

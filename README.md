@@ -4,6 +4,13 @@
 
 **Requirement:** Kirby 3
 
+## Coffee, Beer, etc.
+
+This plugin is free. However, to show your support, especially if using it in a commercial project, you are welcome (greatly encouraged) to:
+- [make a donation 🍻](https://www.paypal.me/omz13/10) or
+- [buy me ☕☕](https://buymeacoff.ee/omz13) or
+- [buy a Kirby license using this affiliate link](https://a.paddle.com/v2/click/1129/36191?link=1170)
+
 ## Documentation
 
 ### Purpose
@@ -17,50 +24,27 @@ For a [Kirby3](https://getkirby.com)-powered site, this plugin (_omz13/badges_) 
 - There are sensible defaults if you forget to provide the necessary key and/or value data in a tag.
 - The badge is rendered locally, provided as a SVG image, and wrapped in a `<div>` with an optional `class`.
 
-#### Caveat
-
-Kirby3 is under beta, therefore this plugin, and indeed kirby3 itself, may or may not play nicely with each other, or indeed work at all: use it for testing purposes only; if you use it in production then you should be aware of the risks and know what you are doing.
-
 #### Roadmap
 
-For 1.0, the non-binding list of further features and implementation notes are:
+The non-binding list of further features and implementation notes are:
 
-- [ ] Wait for Kirby3 GA
 - [ ] Page-level function
+- [x] Put a joke or two into README
+- [x] Use the word _epistemological_ in README to confuse everybody (except people who do or have done philosophy or art history).
 
 ### Installation
 
-#### via composer
+Pick one of the following per your epistemological model:
 
-If your kirby3-based site is managed using-composer, simply invoke `composer require --no-dev omz13/kirby3-badges`, or add `omz13/kirby3-badges` to the "require" component of your site's `composer.json` as necessary, e.g. to be on the bleeding-edge:
+- `composer require --no-dev omz13/kirby3-badges`; the plugin will automagically appear in `site/plugins`.
+- Download a zip of the latest release - [master.zip](https://github.com/omz13/kirby3-badges/archive/master.zip) - and copy the contents to your `site/plugins/kirby3-badges`.
+- `git submodule add https://github.com/omz13/kirby3-badges.git site/plugins/kirby3-badges`.
 
-```yaml
-"require": {
-  ...
-  "omz13/kirby3-badges": "@dev",
-  ...
-}
-```
-
-#### via git
-
-Clone github.com/omz13/kirby3-badges into your `site/plugins` and then in `site/plugins/kirby3-badges` invoke ``composer update --no-dev`` to generate the `vendor` folder and the magic within.
-
-```sh
-$ git clone github.com/omz13/kirby3-badges site/plugins/kirby3-badges
-$ cd site/plugins/kirby3-badges
-$ composer update --no-dev
-```
-
-If your project itself is under git, then you need to add the plugin as a submodule and possibly automate the composer update; it is assumed if you are doing this that you know what to do.
-
-#### via zip
-
-So you want everything in a zip file you can simply expand into `site/plugins/kirby3-badges`? Not yet. Sorry.
+For the record: installation by composer is cool; supporting installation by zip and submodule was an absolute pain, especially as I am an installation by composer person, so do feel guilted into getting me Coffee, Beer, etc., because this is for _your_ benefit and _not mine_ (and yes, I would have have preferred to spend my time somewhere warm and sunny instead of being hunched over a keyboard while the snow falls outside and the thermometer shows no inclination to get above 0C).
 
 ### Configuration
 
-The following mechanisms can be used to modify the plugin's behaviour.
+The following mechanisms can be used to modify the plugin's behavior.
 
 #### via `config.php`
 
@@ -151,12 +135,3 @@ This plugin is provided "as is" with no guarantee. Use it at your own risk and a
 [MIT](https://opensource.org/licenses/MIT)
 
 You are prohibited from using this plugin in any project that promotes racism, sexism, homophobia, animal abuse, violence or any other form of hate speech.
-
-### Buy Me A Coffee
-
-To show your support for this project you are welcome to [buy me a coffee](https://buymeacoff.ee/omz13).
-
-<!-- If you are using this plugin on a kirby3 site that has a Personal licence, to show your support for this project you are welcome to [buy me a coffee](https://buymeacoff.ee/omz13).
-
-If you are using this plugin with a kirby3 site that has a Pro licence, to show your support for this project you are greatly encouraged to [buy me a coffee](https://buymeacoff.ee/omz13).
--->
