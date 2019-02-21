@@ -23,7 +23,7 @@ use function in_array;
 use function kirby;
 use function strstr;
 
-define( 'BADGES_VERSION', '0.1.0' );
+define( 'BADGES_VERSION', '0.2.0' );
 
 class Badges
 {

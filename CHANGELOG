@@ -2,5 +2,10 @@
 VERSION 0  BETA RELEASE
 =======================
 
+   Version 0.2 - Install by Zip or Submodule
+      21/02/2019 07:55  0.2.0  initial release
+         88f9564 Chore: composer update
+         affffbf Refactor: install by zip or submodule
+
    Version 0.1 - beta release
       12/09/2018 18:16  0.1.0  initial release
